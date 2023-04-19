@@ -4,6 +4,7 @@ import App from "../App";
 import Home from "./Home";
 import RSVP from "./RSVP";
 import Gallery from "./Gallery";
+import Admin from "./Admin";
 
 const Router = createBrowserRouter([
   {
@@ -13,8 +14,10 @@ const Router = createBrowserRouter([
       { path: "", element: <Home />},
       { path: "rsvp", element: <RSVP />},
       { path: "gallery", element: <Gallery />},
+      
     ]
   },
+  { path: "/admin", element: <Admin />},
 ]);
 
 export default Router;

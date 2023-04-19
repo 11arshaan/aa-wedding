@@ -36,6 +36,7 @@
     padding: 3px 1%;
     background-color: var(--text-color-2);
     border: 1px solid var(--ui-stroke-2);
+    resize: none;
   }
 
   legend {
@@ -88,7 +89,7 @@
 #rsvp-confirm {
   background-color: var(--ui-color-1);
   border: 1px solid var(--ui-stroke-1);
-  color: var(--text-color-2);
+  color: #DBDAD4;
   font-family: 'Newsreader', serif;
   font-size: 18px;
   margin-top: 1rem;

@@ -1,4 +1,5 @@
 import { Formik, useFormik } from "formik";
+import { addGuest } from "../../utility/firebase-util";
 import './RSVPForm.scss';
 
 export default function RSVPForm() {
@@ -13,6 +14,7 @@ export default function RSVPForm() {
     },
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
+      addGuest(values.name, values.email, values.phone, values.attending, values.guests, values.message);
     },
   });
 
@@ -87,7 +89,7 @@ export default function RSVPForm() {
         <label htmlFor="rsvp-attending">Maybe</label>
         </div>
       </fieldset>
-      
+
       <label htmlFor="rsvp-guests">Total Guests</label>
       <input
         id="rsvp-guests"
