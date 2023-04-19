@@ -7,6 +7,10 @@
   color: rgba(0, 0, 0, 0.87);
   
   --text-color-1: #535351;
+  --text-color-2: #DBDAD4;
+  --ui-color-1: #636361;
+  --ui-stroke-1: #BCBCB5;
+  --ui-stroke-2: #949289;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

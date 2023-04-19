@@ -6,7 +6,7 @@ export default function Navbar() {
     <div className={styles.navbar}>
       <div className={styles.navbar__links}>
         <div className={styles.navbar__link}>
-          <Link to="/home" id="navbar-home">
+          <Link to="/" id="navbar-home">
             Home
           </Link>
         </div>
