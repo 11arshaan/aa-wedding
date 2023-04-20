@@ -7,47 +7,28 @@
 .app {
   width: 100%;
   height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  overflow: hidden;
 
-  @media screen and (min-width: 900px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    overflow-x: hidden;
   }
-}
-
-
-
-.left-plant {
-  position: fixed; /* This keeps the image in a fixed position as the user scrolls */
-  top: -10%; /* This positions the image at the top of the viewport */
-  left: 0; /* This positions the image at the left edge of the viewport */
-  height: 125%; /* Adjust the height to your preference, e.g., 80% */
-  width: auto; /* This maintains the aspect ratio of the image as the height changes */
-  pointer-events: none; /* This prevents the user from clicking on the image */
-  // border: 1px solid black;
-}
-
-.wind-leaves {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
 }
 
 .container {
-  @media screen and (min-width: 900px) {
-    grid-area: 1 / 2 / 2 / 4;
-    // background-color: pink;
+  grid-area: 1 / 2 / 2 / 4;
+  // background-color: pink;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
-
 
 .container-left-rsvp {
   grid-area: 1 / 1 / 2 / 2;
@@ -60,94 +41,13 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
-  }
-
-
-.container-left {
-  grid-area: 1 / 1 / 2 / 2;
-  width: 100%;
-  height: 60%;
-  margin: auto auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-  .invite-header {
-    margin-top: 1rem;
-    &-text {
-      font-family: "Alike", serif;
-      font-size: 18px;
-      color: var(--text-color-1);
-
-  
-        
-      }
-    }
-  }
-
-  .names-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-
-
-    div {
-      
-      .marrier-name {
-        font-family: "Alex Brush", cursive;
-        font-size: 52px;
-        white-space: nowrap;
-        color: var(--text-color-1);
-      }
-
-      .parent-names {
-        font-family: "Alike", serif;
-        font-size: 18px;
-        position: relative;
-        top: -12px;
-        color: var(--text-color-1);
-      }
-    }
-
-    .ampersand {
-      margin: 0 0;
-      font-family: "Alex Brush", cursive;
-      font-size: 36px;
-      color: var(--text-color-1);
-    }
- 
-  }
-
-  .event-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    &-text {
-      font-family: "Alike", serif;
-      font-size: 16px;
-      font-weight: lighter;
-      color: var(--text-color-1);
-    }
-  }
-
-
-.container-right {
-  grid-area: 1 / 2 / 2 / 3;
-  width: 100%;
-  height: 100%;
 }
 
 .gallery-notice {
   font-family: "Alike", serif;
-      font-size: 26px;
-      position: relative;
-      top: 40%;
-      font-weight: lighter;
-      color: var(--text-color-1);
+  font-size: 26px;
+  position: relative;
+  top: 40%;
+  font-weight: lighter;
+  color: var(--text-color-1);
 }

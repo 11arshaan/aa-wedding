@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   margin: auto auto;
-  
+
   height: 100vh;
   width: 100vw;
   background-color: #f5f5f5;
@@ -14,11 +14,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border: 1px solid red;
+  
   width: 80%;
   height: 80%;
+  overflow-y: auto;
 }
-
 
 .accordion-container {
   display: flex;
@@ -27,33 +27,84 @@
   width: 100%;
 }
 
-
 /* Style the buttons that are used to open and close the accordion panel */
 .guest-accordion {
   background-color: #eee;
+  border: 1px solid #444;
   color: #444;
   cursor: pointer;
   padding: 18px 0;
-  
+
   width: 100%;
   text-align: left;
   border: none;
   outline: none;
   transition: 0.4s;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 2fr 1.5fr;
+  user-select: text;
 
+  &-name {
+    font-family: "Bona Nova", serif;
+    font-size: 1.2rem;
+    color: #636361;
+
+    text-align: left;
+    padding-left: 1rem;
+  }
+
+  &-attending {
+    width: 50%;
+  }
 }
 
+.guest-accordion-header {
+  background-color: #eee;
+  color: #444;
+  padding: 18px 0;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 2fr 1.5fr;
+
+  span {
+    font-family: "Bona Nova", serif;
+    font-size: 1.2rem;
+    color: #636361;
+  }
+}
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+
 .active-guest, .guest-accordion:hover {
-  background-color: #726d6d;
+  background-color: #acaba8;
 }
 
 /* Style the accordion panel. Note: hidden by default */
 .guest-details {
   padding: 0 18px;
-  background-color: white;
+  background-color: rgb(199, 193, 193);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  
+
+  &-message {
+    p {
+      text-align: left;
+      font-family: "Newsreader", serif;
+      font-size: 1.2rem;
+      color: #565654;
+      margin: 1rem 0;
+    }
+
+    .message-text {
+      font-family: "Newsreader", serif;
+      font-size: 16px;
+    }
+  }
 }

@@ -1,0 +1,114 @@
+.rightContainer {
+  width: 100%;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+
+  @media screen and (max-width: 900px) {
+    grid-template-rows: 1fr 1fr;
+  
+    
+  }
+}
+
+.AALogoContainer {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: 100%;
+  display: flex; /* Added to center the logo */
+  justify-content: center; /* Added to center the logo */
+  align-items: center; 
+
+  .AALogo {
+    width: 12rem;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    left: 7%;
+
+    @media screen and (max-width: 1200px) {
+     width: 8rem;
+      left: 0%;
+
+    }
+
+    @media screen and (max-width: 900px) {
+      left: -10%;
+      width: 7rem;
+     }
+    
+  }
+}
+
+.AAGraphicContainer {
+  width: 100%;
+  height: 100%;
+  grid-area: 2 / 1 / 3 / 2;
+  overflow: hidden;
+  display: flex; /* Added to center the graphic */
+  justify-content: center; /* Added to center the graphic */
+  align-items: flex-start; /* Added to place the graphic at the top of the container */
+
+  @media screen and (max-width: 900px) {
+   overflow: visible;
+
+  }
+  .AAGraphic {
+    width: 100%;
+    height: 100%;
+    object-position: bottom;
+    object-fit: contain;
+    transform: scaleX(-1) translateY(4%) translateX(0%);
+
+    @media screen and (max-width: 1200px) {
+      transform: scaleX(-1) translateY(4%) translateX(5%);
+    }
+    @media screen and (max-width: 900px) {
+      transform: scaleX(-1.2) scaleY(1.2) translateY(-3%) translateX(12%);
+
+    }
+    @media screen and (max-width: 900px) {
+      transform: scaleX(-1);
+
+    }
+  }
+}
+
+
+
+
+
+
+///////////
+///////////
+// MOBILE//
+///////////
+///////////
+
+
+.AAGraphicContainerMobile {
+  width: 100%;
+}
+
+.AAGraphicMobile {
+  width: 100%;
+}
+
+.AALogoContainerMobile {
+  
+  
+  
+  background-color: red;
+  
+  
+}
+
+.AALogoMobile {
+  width: 12rem;
+  height: auto;
+  object-fit: contain;
+  
+
+}

@@ -1,36 +1,41 @@
 import "./App.scss";
 import { Outlet } from "react-router-dom";
-import WindLeavesWebm from "./assets/leaves_slow_2_alpha.webm";
-import WindLeavesMov from "./assets/leaves_slow_2_alpha.mov";
-import LeftPlantMov from "./assets/left_plant.mov";
-import LeftPlantWebm from "./assets/left_plant.webm";
+import { useContext, useEffect, useState } from "react";
+
+import Decorations from "./components/Decorations/Decorations";
+import DecorationsMobile from "./components/Decorations/DecorationsMobile";
+import { WindowContext } from "./utility/WindowContext";
 
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
+  const { resize, setResize } = useContext(WindowContext);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setResize({width: window.innerWidth, height: window.innerHeight});
+     
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log(resize);
+  }, [resize]);
+
   return (
-    <div className="app">
-    <Navbar />
     
-    {/* <img className="left-tree" src={leftTree} /> */}
-  
+    <div className="app">
+    {resize && resize.width > 768 ? <Navbar /> : <Navbar />}
+    {resize && resize.width > 768 ? <Decorations /> : <DecorationsMobile />}
 
 
-    <video autoPlay loop muted className="wind-leaves">
-    <source src={WindLeavesWebm} />
-    <source src={WindLeavesMov} />
-    </video>
-
-    <video autoPlay loop muted className="left-plant">
-    <source src={LeftPlantWebm} />
-    <source src={LeftPlantMov} />
-    </video>
-
-  
-    <Outlet />
+      <Outlet />
     </div>
   );
 }
 
 export default App;
- 

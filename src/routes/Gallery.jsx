@@ -1,4 +1,4 @@
-import RightGraphic from "../components/RightGraphic/RightGraphic";
+import RightGraphic from "../components/Graphic/Graphic";
 
 export default function Gallery(){
   

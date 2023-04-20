@@ -1,7 +1,6 @@
-import RightGraphic from "../components/RightGraphic/RightGraphic";
-
-
-export default function Home() {
+import RightGraphic from "../../components/Graphic/Graphic";
+import "./Home.scss";
+export default function HomeDesktop() {
   return (
     <div className="container">
       <div className="container-left">
@@ -15,16 +14,19 @@ export default function Home() {
         <div className="names-box">
           <div className="names-box-groom">
             <h2 className="marrier-name">Amaritpal Singh Sidhu</h2>
-            <p className="parent-names">Son of Amrik Singh and Kulwinder Kaur Sidhu</p>
+            <p className="parent-names">
+              Son of Amrik Singh and Kulwinder Kaur Sidhu
+            </p>
           </div>
 
           <h2 className="ampersand">&</h2>
 
           <div className="names-box-bride">
             <h2 className="marrier-name">Arsheen Kour</h2>
-            <p className="parent-names">Daughter of Paramjeet Singh and Gurdeep Kour</p>
+            <p className="parent-names">
+              Daughter of Paramjeet Singh and Gurdeep Kour
+            </p>
           </div>
-
         </div>
 
         <div className="event-info">

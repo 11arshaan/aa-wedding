@@ -1,4 +1,4 @@
-import RightGraphic from "../components/RightGraphic/RightGraphic";
+import RightGraphic from "../components/Graphic/Graphic";
 import RSVPForm from "../components/RSVPForm/RSVPForm";
 
 export default function RSVP() {

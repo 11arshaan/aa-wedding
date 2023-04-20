@@ -45,8 +45,11 @@ export async function addGuest(
     });
 
     console.log("Document written with ID: ", docRef.id);
+
+    return true;
   } catch (e) {
     console.error("Error adding document: ", e);
+    return false;
   }
 }
 

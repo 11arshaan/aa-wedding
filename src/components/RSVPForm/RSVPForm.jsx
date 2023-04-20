@@ -1,8 +1,13 @@
 import { Formik, useFormik } from "formik";
 import { addGuest } from "../../utility/firebase-util";
+import {useState, useEffect} from 'react';
 import './RSVPForm.scss';
 
 export default function RSVPForm() {
+
+  const [modal, setModal] = useState(false);
+
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -13,12 +18,35 @@ export default function RSVPForm() {
       message: "",
     },
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-      addGuest(values.name, values.email, values.phone, values.attending, values.guests, values.message);
+      const result = addGuest(values.name, values.email, values.phone, values.attending, values.guests, values.message);
+      if (result) {
+        setModal(true);
+      } else {
+        alert("Error submitting form. Please try again later or e-mail us at: ");
+      }
+      
     },
   });
 
-  return (
+  function handleModal(e) {
+
+    if (e.target.classList.contains('rsvp-modal')) {
+      setModal(false);
+    } else if (e.target.id === "close-modal-button") {
+      setModal(false);
+    }
+
+  }
+
+  return (<>
+  {modal && <div onClick={handleModal}  class="rsvp-modal">
+    <div class="rsvp-modal-content">
+    <h1>Thank you!</h1>
+    <p>We have received your RSVP and will notify you with important updates.</p>
+    <button onClick={handleModal} type="button" id="close-modal-button">Close</button>
+    </div>
+  </div>}
+  
     <form id="rsvp-form" onSubmit={formik.handleSubmit}>
       <label htmlFor="rsvp-name">Name</label>
       <input
@@ -110,5 +138,6 @@ export default function RSVPForm() {
 
       <button id="rsvp-confirm" type="submit">Confirm</button>
     </form>
+    </>
   );
 }

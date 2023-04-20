@@ -24,7 +24,12 @@
    &__link {
 
       margin: .5rem 0;
-      
+      @media screen and (max-width: 1200px) {
+        margin: .5rem 2rem;
+             
+      }
+
+
       a {
         text-decoration: none;
         font-family: 'Bona Nova', serif;
@@ -33,6 +38,9 @@
         color: #636361;
         transition: all 0.3s ease-in-out;
 
+        @media screen and (max-width: 1200px) {
+          font-size: 1.5rem;      
+        }
 
        
       }
