@@ -8,12 +8,12 @@ import "./Decorations.scss";
 export default function Decorations() {
   return (
     <>
-      <video autoPlay loop muted className="wind-leaves">
+      <video autoPlay loop muted playsInline className="wind-leaves">
         <source src={WindLeavesWebm} />
         <source src={WindLeavesMov} />
       </video>
 
-      <video autoPlay loop muted className="left-plant">
+      <video autoPlay loop muted playsInline className="left-plant">
         <source src={LeftPlantWebm} />
         <source src={LeftPlantMov} />
       </video>
