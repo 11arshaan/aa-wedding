@@ -7,9 +7,11 @@ import DecorationsMobile from "./components/Decorations/DecorationsMobile";
 import { WindowContext } from "./utility/WindowContext";
 
 import Navbar from "./components/Navbar/Navbar";
+import NavbarMobile from "./components/Navbar/NavbarMobile";
 
 function App() {
   const { resize, setResize } = useContext(WindowContext);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,7 +22,8 @@ function App() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+    setLoaded(true);
+  }, [loaded]);
 
   useEffect(() => {
     console.log(resize);
@@ -29,7 +32,7 @@ function App() {
   return (
     
     <div className="app">
-    {resize && resize.width > 768 ? <Navbar /> : <Navbar />}
+    {resize && resize.width > 768 ? <Navbar /> : <NavbarMobile />}
     {resize && resize.width > 768 ? <Decorations /> : <DecorationsMobile />}
 
 

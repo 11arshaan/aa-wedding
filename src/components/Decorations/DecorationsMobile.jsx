@@ -11,11 +11,13 @@ export default function DecorationsMobile() {
         <source src={WindLeavesWebm} />
         <source src={WindLeavesMov} />
       </video>
-
+      
+      <div className="plants-container-mobile">
       <video autoPlay loop muted className="left-plant-mobile">
         <source src={LeftPlantWebm} />
         <source src={LeftPlantMov} />
       </video>
+      </div>
     </>
   );
 }

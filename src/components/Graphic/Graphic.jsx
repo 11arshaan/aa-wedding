@@ -2,10 +2,18 @@ import styles from "./Graphic.module.scss";
 import AAGraphic from "../../assets/amritarsheenpaint.png";
 import AALogo from "../../assets/AALogo.svg";
 import { WindowContext } from "../../utility/WindowContext";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 
 export default function RightGraphic() {
-  const { resize } = useContext(WindowContext);
+  const { resize, setResize } = useContext(WindowContext);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setLoaded(true);
+  }, [loaded, resize]);
+
+
+
   return (
     <>
       {resize && resize.width > 768 && (

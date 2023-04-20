@@ -21,6 +21,12 @@
 
 
 
+.plants-container-mobile {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
 .left-plant-mobile {
   position: absolute; /* This keeps the image in a fixed position as the user scrolls */
   top: -10%; /* This positions the image at the top of the viewport */
