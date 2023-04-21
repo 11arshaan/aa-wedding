@@ -26,6 +26,7 @@
   height: 100%;
   overflow: hidden;
   position: absolute;
+  pointer-events: none;
 }
 .left-plant-mobile {
   position: absolute; /* This keeps the image in a fixed position as the user scrolls */

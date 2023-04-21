@@ -9,7 +9,10 @@ export const WindowContext = createContext({
 
 
 export function WindowProvider({ children }) {
-  const [resize, setResize] = useState(null);
+  const [resize, setResize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
 
   return (
     <WindowContext.Provider value={{ resize, setResize }}>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getGuests } from "../utility/firebase-util";
+import { getGuests } from "../../utility/firebase-util";
 import "./Admin.scss";
 
 export default function Admin() {

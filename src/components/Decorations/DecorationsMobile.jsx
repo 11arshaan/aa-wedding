@@ -4,6 +4,7 @@ import LeftPlantMov from "../../assets/left_plant.mov";
 import LeftPlantWebm from "../../assets/left_plant.webm";
 import "./Decorations.scss";
 
+
 export default function DecorationsMobile() {
   return (
     <>

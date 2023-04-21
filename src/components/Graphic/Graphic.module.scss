@@ -35,7 +35,7 @@
     }
 
     @media screen and (max-width: 900px) {
-      left: -10%;
+      left: 3%;
       width: 7rem;
      }
     
@@ -97,7 +97,8 @@
 }
 
 .AALogoContainerMobile {
-  
+  position: absolute;
+  top: 5%;
   
   
   background-color: red;
@@ -106,7 +107,7 @@
 }
 
 .AALogoMobile {
-  width: 12rem;
+  width: 8rem;
   height: auto;
   object-fit: contain;
   

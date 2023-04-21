@@ -25,9 +25,6 @@ function App() {
     setLoaded(true);
   }, [loaded]);
 
-  useEffect(() => {
-    console.log(resize);
-  }, [resize]);
 
   return (
     

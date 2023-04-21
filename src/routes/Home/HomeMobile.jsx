@@ -1,4 +1,4 @@
-import RightGraphic from "../../components/Graphic/Graphic";
+import Graphic from "../../components/Graphic/Graphic";
 import "./Home.scss";
 export default function HomeMobile() {
   return (
@@ -36,9 +36,9 @@ export default function HomeMobile() {
         </div>
       </div>
 
-      <div className="mobile-graphic-container">
-        <RightGraphic />
-      </div>
+      {/* <div className="mobile-graphic-container"> */}
+        <Graphic />
+      {/* </div> */}
     </div>
   );
 }

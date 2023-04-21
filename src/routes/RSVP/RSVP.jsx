@@ -1,5 +1,7 @@
-import RightGraphic from "../components/Graphic/Graphic";
-import RSVPForm from "../components/RSVPForm/RSVPForm";
+import RightGraphic from "../../components/Graphic/Graphic";
+import RSVPForm from "../../components/RSVPForm/RSVPForm";
+import "./RSVP.scss";
+
 
 export default function RSVP() {
 
