@@ -1,7 +1,8 @@
 import styles from "./Navbar.module.scss";
 import { Link, useLocation } from "react-router-dom";
+import ToggleAudio from "../ToggleAudio/ToggleAudio";
 
-export default function Navbar() {
+export default function Navbar({music}) {
   const location = useLocation();
 
   return (
@@ -35,6 +36,10 @@ export default function Navbar() {
           >
             Gallery
           </Link>
+        </div>
+
+        <div className={styles.navbar__link}>
+        <ToggleAudio  music={music} />
         </div>
       </div>
     </div>
