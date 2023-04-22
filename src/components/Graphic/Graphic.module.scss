@@ -89,25 +89,30 @@
 
 
 .AAGraphicContainerMobile {
-  width: 100%;
+  width: 55%;
+  top: 53%;
+  left: 25%;
+  position: absolute;
+  
 }
 
 .AAGraphicMobile {
   width: 100%;
+  transform: scaleX(-1);
 }
 
 .AALogoContainerMobile {
   position: absolute;
-  top: 5%;
+  top: 10%;
   
   
-  background-color: red;
+  
   
   
 }
 
 .AALogoMobile {
-  width: 8rem;
+  width: 7rem;
   height: auto;
   object-fit: contain;
   

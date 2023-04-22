@@ -35,6 +35,7 @@ export default function RightGraphic() {
           <div className={styles.AAGraphicContainerMobile}>
             <img className={styles.AAGraphicMobile} src={AAGraphic} />
           </div>
+          
         </>
       )}
     </>

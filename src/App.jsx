@@ -8,6 +8,7 @@ import { WindowContext } from "./utility/WindowContext";
 
 import Navbar from "./components/Navbar/Navbar";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
+import Loading from "./components/Loading/Loading";
 
 function App() {
   const { resize, setResize } = useContext(WindowContext);
@@ -15,23 +16,25 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
-      setResize({width: window.innerWidth, height: window.innerHeight});
-     
+      setResize({ width: window.innerWidth, height: window.innerHeight });
     };
     window.addEventListener("resize", handleResize);
+
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 3000); // Adjust the timeout duration as needed
+
     return () => {
+      clearTimeout(timer);
       window.removeEventListener("resize", handleResize);
     };
-    setLoaded(true);
-  }, [loaded]);
-
+  }, []);
 
   return (
-    
     <div className="app">
-    {resize && resize.width > 768 ? <Navbar /> : <NavbarMobile />}
-    {resize && resize.width > 768 ? <Decorations /> : <DecorationsMobile />}
-
+      <Loading fade={loaded} />
+      {resize && resize.width > 768 ? <Navbar /> : <NavbarMobile />}
+      {resize && resize.width > 768 ? <Decorations /> : <DecorationsMobile />}
 
       <Outlet />
     </div>

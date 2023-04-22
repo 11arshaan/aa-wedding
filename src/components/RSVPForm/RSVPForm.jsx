@@ -17,14 +17,15 @@ export default function RSVPForm() {
       guests: 0,
       message: "",
     },
-    onSubmit: (values) => {
-      const result = addGuest(values.name, values.email, values.phone, values.attending, values.guests, values.message);
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
+      const result = await addGuest(values.name, values.email, values.phone, values.attending, values.guests, values.message);
       if (result) {
         setModal(true);
+        resetForm(); // Reset the form values
       } else {
         alert("Error submitting form. Please try again later or e-mail us at: ");
       }
-      
+      setSubmitting(false); // Set submitting back to false
     },
   });
 
@@ -136,7 +137,7 @@ export default function RSVPForm() {
         value={formik.values.message}
       />
 
-      <button id="rsvp-confirm" type="submit">Confirm</button>
+      <button id="rsvp-confirm" type="submit" disabled={formik.isSubmitting}>Confirm</button>
     </form>
     </>
   );

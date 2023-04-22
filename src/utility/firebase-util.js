@@ -1,6 +1,7 @@
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 import { initializeApp } from "firebase/app";
+
 import {
   getFirestore,
   addDoc,
@@ -24,6 +25,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
+
+
 
 // add document to collection
 export async function addGuest(
@@ -65,3 +68,5 @@ export function getGuests(callback) {
     callback(guestList);
   });
 }
+
+

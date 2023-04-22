@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getGuests } from "../../utility/firebase-util";
 import "./Admin.scss";
 
+
 export default function Admin() {
   const [guests, setGuests] = useState([]);
 
@@ -23,6 +24,8 @@ export default function Admin() {
       }
     };
   }, []);
+
+  
 
   function createGuestEntry(guest) {
     const data = guest.data;
@@ -69,6 +72,8 @@ export default function Admin() {
   return (
     <div className="app">
       <div className="admin">
+     
+
         <div className="guests-container">
         <div   className="accordion-container">
         <button onClick={handleClick} className="guest-accordion-header">
