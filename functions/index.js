@@ -23,7 +23,7 @@ exports.sendEmailOnRSVP = functions.firestore
       // Prepare email data
       const mailOptions = {
         from: "amaritandarsheen@gmail.com",
-        to: "11arshaan@gmail.com",
+        to: "11arshaan@gmail.com,laadikour@hotmail.com,Arsheen.kour@yahoo.com",
         subject: "New RSVP: " + guestData.name + "",
         text: `
       Name: ${guestData.name}
