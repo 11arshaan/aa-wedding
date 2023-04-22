@@ -23,7 +23,7 @@ const Loading = ({fade, music}) => {
       {/* Your loading page content */}
       <img className="loading-logo" src={AALogo} />
       {fade ? '' : <h1>Loading...</h1>}
-      {fade ? <button type="button" id="load-button" onClick>Enter</button> : ''}
+      {fade ? <button type="button" id="load-button">Enter</button> : ''}
     </div>
   );
 };
