@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { getGuests } from "../../utility/firebase-util";
 import "./Admin.scss";
-
+import Authentication from "./Authentication";
 
 export default function Admin() {
   const [guests, setGuests] = useState([]);
+  const [authenticated, setAuthenticated] = useState(false);
 
   useEffect(() => {
     //check localStorage
@@ -25,12 +26,10 @@ export default function Admin() {
     };
   }, []);
 
-  
-
   function createGuestEntry(guest) {
     const data = guest.data;
     return (
-      <div key={guest.id}  className="accordion-container">
+      <div key={guest.id} className="accordion-container">
         <button onClick={handleClick} className="guest-accordion">
           <span className="guest-accordion-name">{data.name}</span>
           <span>{data.attending}</span>
@@ -43,8 +42,6 @@ export default function Admin() {
             <p>Message:</p>
             <p className="message-text">{data.message}</p>
           </div>
-
-
         </div>
       </div>
     );
@@ -69,29 +66,27 @@ export default function Admin() {
     }
   };
 
-  return (
+  return authenticated ? (
     <div className="app">
       <div className="admin">
-     
-
         <div className="guests-container">
-        <div   className="accordion-container">
-        <button onClick={handleClick} className="guest-accordion-header">
-          <span className="guest-accordion-name">Name</span>
-          <span>Attending</span>
-          <span>Total Guest</span>
-          <span>E-mail</span>
-          <span>Phone</span>
-        </button>
-        <div className="guest-details">
-          <div className="guest-details-message">
+          <div className="accordion-container">
+            <button onClick={handleClick} className="guest-accordion-header">
+              <span className="guest-accordion-name">Name</span>
+              <span>Attending</span>
+              <span>Total Guest</span>
+              <span>E-mail</span>
+              <span>Phone</span>
+            </button>
+            <div className="guest-details">
+              <div className="guest-details-message"></div>
+            </div>
           </div>
-
-
+          {guests.map(createGuestEntry)}
         </div>
       </div>
-        {guests.map(createGuestEntry)}</div>
-      </div>
     </div>
+  ) : (
+    <Authentication onAuthSuccess={() => setAuthenticated(true)} />
   );
 }
