@@ -1,6 +1,6 @@
 import styles from "./Graphic.module.scss";
 import AAGraphic from "../../assets/amritarsheenpaint.png";
-import AALogo from "../../assets/AALogo.svg";
+import AALogo from "../../assets/Ek_onkar.svg";
 import { WindowContext } from "../../utility/WindowContext";
 import { useContext, useEffect, useState } from "react";
 

@@ -12,6 +12,7 @@ export function WindowProvider({ children }) {
   const [resize, setResize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
+    loaded: false
   });
 
   return (

@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
-      setResize({ width: window.innerWidth, height: window.innerHeight });
+      setResize({ width: window.innerWidth, height: window.innerHeight, ...resize });
     };
     window.addEventListener("resize", handleResize);
 
