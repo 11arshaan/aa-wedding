@@ -18,9 +18,9 @@ export default function RightGraphic() {
     <>
       {resize && resize.width > 768 && (
         <div className={styles.rightContainer}>
-          <div className={styles.AALogoContainer}>
+          {/* <div className={styles.AALogoContainer}>
             <img className={styles.AALogo} src={AALogo} />
-          </div>
+          </div> */}
           <div className={styles.AAGraphicContainer}>
             <img className={styles.AAGraphic} src={AAGraphic} />
           </div>
