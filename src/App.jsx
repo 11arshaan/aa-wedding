@@ -9,14 +9,13 @@ import { WindowContext } from "./utility/WindowContext";
 import Navbar from "./components/Navbar/Navbar";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
 import Loading from "./components/Loading/Loading";
-import music from "./assets/AAvibe.mp3";
-import ToggleAudio from "./components/ToggleAudio/ToggleAudio";
+
 
 
 function App() {
   const { resize, setResize } = useContext(WindowContext);
   const [loaded, setLoaded] = useState(false);
-  const audioRef = useRef();
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -39,11 +38,11 @@ function App() {
 
   return (
     <div className="app">
-      <Loading fade={loaded} music={audioRef} />
-      <audio ref={audioRef} src={music} loop />
-      {resize && resize.width > 768 ? <Navbar music={audioRef} /> : ''}
+      <Loading fade={loaded}  />
+      
+      {resize && resize.width > 768 ? <Navbar  /> : ''}
       {resize && resize.width > 768 ? <Decorations /> : <DecorationsMobile />}
-      {resize && resize.width < 768 && <ToggleAudio  music={audioRef} />}
+
 
       <Outlet />
     </div>

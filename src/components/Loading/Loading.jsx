@@ -1,11 +1,11 @@
 // LoadingPage.jsx
 import React from 'react';
 import './Loading.scss';
-import AALogo from "../../assets/AALogo.svg";
+import AALogo from "../../assets/Ek_onkar.svg";
 import {useRef, useContext, useEffect} from 'react';
 import { LoadedContext } from '../../utility/LoadedContext';
 
-const Loading = ({fade, music}) => {
+const Loading = ({fade}) => {
   const { setLoaded } = useContext(LoadedContext);
 
   const ref = useRef();
@@ -13,7 +13,7 @@ const Loading = ({fade, music}) => {
 
     if (fade) {
       document.getElementById("load-button").addEventListener("click", () => {
-        music.current.play();
+       
         ref.current.classList.add("fade-out");
         setLoaded({loaded: true});
       });
