@@ -15,11 +15,12 @@ import Loading from "./components/Loading/Loading";
 function App() {
   const { resize, setResize } = useContext(WindowContext);
   const [loaded, setLoaded] = useState(false);
+  const [refresh, setRefresh] = useState(false);
 
 
   useEffect(() => {
     const handleResize = () => {
-      setResize({ width: window.innerWidth, height: window.innerHeight, ...resize });
+      setResize({ width: window.innerWidth, height: window.innerHeight});
     };
     window.addEventListener("resize", handleResize);
 
@@ -34,13 +35,17 @@ function App() {
     };
   }, []);
 
+  
+  useEffect(() => {
+    setRefresh(!refresh);
+  }, [resize]);
 
 
   return (
     <div className="app">
       <Loading fade={loaded}  />
-      
-      {resize && resize.width > 768 ? <Navbar  /> : ''}
+  
+      {resize && resize.width > 768 ? <Navbar  /> : <NavbarMobile />}
       {resize && resize.width > 768 ? <Decorations /> : <DecorationsMobile />}
 
 

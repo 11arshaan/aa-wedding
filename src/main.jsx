@@ -9,11 +9,13 @@ import { LoadedProvider } from "./utility/LoadedContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   // <React.StrictMode>
-  <WindowProvider>
   <LoadedProvider>
+  <WindowProvider>
+ 
     <RouterProvider router={Router} />
-    </LoadedProvider>
+x
   </WindowProvider>
+  </LoadedProvider>
 
   // </React.StrictMode>,
 );
