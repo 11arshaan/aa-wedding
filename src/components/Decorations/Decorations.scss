@@ -1,3 +1,7 @@
+*::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
 
 .left-plant {
   position: fixed; /* This keeps the image in a fixed position as the user scrolls */
@@ -17,6 +21,7 @@
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+
 }
 
 
