@@ -20,6 +20,10 @@
   display: flex; /* Added to center the logo */
   justify-content: center; /* Added to center the logo */
   align-items: center; 
+  
+  @media screen and (max-width: 900px) {
+    position: absolute;
+  }
 
   .AALogo {
     width: 12rem;
