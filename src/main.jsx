@@ -13,7 +13,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <WindowProvider>
  
     <RouterProvider router={Router} />
-x
   </WindowProvider>
   </LoadedProvider>
 
