@@ -1,0 +1,40 @@
+{
+  "name": "arsheen-amrit",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "firebase": "^9.20.0",
+    "firebase-admin": "^11.7.0",
+    "firebase-functions": "^4.3.1",
+    "formik": "^2.2.9",
+    "googleapis": "^118.0.0",
+    "nodemailer": "^6.9.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0",
+    "typed.js": "^2.0.15"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "eslint": "^8.39.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0",
+    "sass": "^1.62.0",
+    "vite": "^4.2.0"
+  }
+}

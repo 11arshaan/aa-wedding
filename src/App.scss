@@ -1,0 +1,44 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  overflow: auto;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+    
+  }
+}
+
+.container {
+  grid-area: 1 / 2 / 2 / 4;
+  // background-color: pink;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+
+
+.gallery-notice {
+  font-family: "Alike", serif;
+  font-size: 26px;
+  position: relative;
+  top: 40%;
+  font-weight: lighter;
+  color: var(--text-color-1);
+}
