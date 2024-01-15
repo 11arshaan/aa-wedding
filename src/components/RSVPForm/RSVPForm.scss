@@ -41,6 +41,10 @@
   }
 }
 
+button {
+  cursor: pointer;
+}
+
 #rsvp-form {
   display: flex;
   flex-direction: column;
@@ -76,7 +80,17 @@
     font-size: 18px;
     background-color: var(--text-color-2);
     border: 1px solid var(--ui-stroke-2);
+    border-radius: 3px;
+    
+
+    &:focus {
+      outline: 2px solid rgb(164, 203, 145);
+    }
+    
   }
+
+
+
   textarea {
     width: 98%;
     height: 150px;
@@ -87,6 +101,10 @@
     background-color: var(--text-color-2);
     border: 1px solid var(--ui-stroke-2);
     resize: none;
+
+    &:focus {
+      outline: 2px solid rgb(164, 203, 145);
+    }
   }
 
   legend {
@@ -97,6 +115,10 @@
     font-weight: light;
     font-size: 18px;
     margin-top: 1rem;
+  }
+
+  input[type=radio] {
+    cursor: pointer;
   }
 
   fieldset {

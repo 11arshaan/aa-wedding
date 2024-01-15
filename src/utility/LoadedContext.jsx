@@ -9,9 +9,7 @@ export const LoadedContext = createContext({
 
 
 export function LoadedProvider({ children }) {
-  const [loaded, setLoaded] = useState({
-    loaded: false
-  });
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <LoadedContext.Provider value={{ loaded, setLoaded }}>

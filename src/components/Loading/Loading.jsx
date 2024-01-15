@@ -5,28 +5,17 @@ import AALogo from "../../assets/Ek_onkar.svg";
 import {useRef, useContext, useEffect} from 'react';
 import { LoadedContext } from '../../utility/LoadedContext';
 
-const Loading = ({fade}) => {
-  const { setLoaded } = useContext(LoadedContext);
+const Loading = ({loaded}) => {
 
-  const ref = useRef();
-  useEffect(()=>{
+  const fadeOut = loaded ? "fade-out" : "";
 
-    if (fade) {
-      document.getElementById("load-button").addEventListener("click", () => {
-       
-        ref.current.classList.add("fade-out");
-        setLoaded({loaded: true});
-      });
-    }
-   
-  }, [fade]);
+  const ref = useRef(); 
 
   return (
-    <div ref={ref} className={`loading-page`}>
+    <div ref={ref} className={`loading-page ${fadeOut}`}>
       {/* Your loading page content */}
       <img className="loading-logo" src={AALogo} />
-      {fade ? '' : <h1>Loading...</h1>}
-      {fade ? <button type="button" id="load-button">Enter</button> : ''}
+      {loaded ? '' : <h1>Loading...</h1>}
     </div>
   );
 };

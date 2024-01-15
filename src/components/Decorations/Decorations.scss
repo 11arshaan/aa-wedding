@@ -10,7 +10,7 @@
   height: 125%; /* Adjust the height to your preference, e.g., 80% */
   width: auto; /* This maintains the aspect ratio of the image as the height changes */
   pointer-events: none; /* This prevents the user from clicking on the image */
-
+  visibility: hidden;
 }
 
 .wind-leaves {

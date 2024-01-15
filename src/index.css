@@ -45,10 +45,31 @@ html, body {
 
 body {
  background-color: #f4f3f0;
-  background-image: url('./assets/BackgroundTexture.jpg');
-  background-size: contain;
+  background-image: url('./assets/hand-painted-watercolor-floral-frame-background.jpg');
+  background-size: 110%;
+  background-position: 50% 50%;
+  background-attachment: fixed;
   
 
 }
 
 
+
+
+.fade-in {
+
+  animation: fadein 2s linear;
+
+}
+
+@keyframes fadein {
+
+  from { 
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}

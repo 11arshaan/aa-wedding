@@ -37,6 +37,17 @@ export default function Navbar() {
             Gallery
           </Link>
         </div>
+        <div className={styles.navbar__link}>
+          <Link
+            to="/story"
+            id="navbar-story"
+            className={
+              location.pathname === "/story" ? styles.activeLink : ""
+            }
+          >
+            Story
+          </Link>
+        </div>
 
         <div className={styles.navbar__link}>
         
