@@ -55,16 +55,16 @@
     height: 100%;
     object-position: bottom;
     object-fit: contain;
-    transform: scaleX(-1) translateY(4%) translateX(0%);
+    transform: scaleX(1) translateY(4%) translateX(0%);
 
     @media screen and (max-width: 1200px) {
-      transform: scaleX(-1) translateY(4%) translateX(5%);
+      transform: scaleX(1) translateY(4%) translateX(5%);
     }
     @media screen and (max-width: 900px) {
-      transform: scaleX(-1.2) scaleY(1.2) translateY(-3%) translateX(12%);
+      transform: scaleX(1.2) scaleY(1.2) translateY(-3%) translateX(12%);
     }
     @media screen and (max-width: 900px) {
-      transform: scaleX(-1);
+      transform: scaleX(1);
     }
   }
 }

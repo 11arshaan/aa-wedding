@@ -45,7 +45,7 @@ export default function Navbar() {
               location.pathname === "/story" ? styles.activeLink : ""
             }
           >
-            Story
+            Our Story
           </Link>
         </div>
 

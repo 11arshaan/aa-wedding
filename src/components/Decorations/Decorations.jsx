@@ -13,10 +13,10 @@ export default function Decorations() {
         <source src={WindLeavesMov} />
       </video>
 
-      <video autoPlay loop muted playsInline className="left-plant">
+      {/* <video autoPlay loop muted playsInline className="left-plant">
         <source src={LeftPlantWebm} />
         <source src={LeftPlantMov} />
-      </video>
+      </video> */}
     </>
   );
 }
