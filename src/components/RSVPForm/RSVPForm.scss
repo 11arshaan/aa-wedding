@@ -10,12 +10,17 @@
   z-index: 100;
   backdrop-filter: blur(5px);
 
+  @media screen and (max-width: 768px) {
+    width: 100%;
+ 
+   }
+
   &-content {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 40%;
     margin: auto;
     background-color: #dbdad4;
     border-radius: 10px;
@@ -54,10 +59,22 @@ button {
   height: 100%;
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: 10rem;
+  z-index: 9999999;
+ 
+  padding: 10px 10px;
 
   @media screen and (max-width: 768px) {
-    z-index: 60;
+    z-index: 9;
+    padding-top: 2rem;
     margin-bottom: 3rem;
+    width: 80%;
+    height: max-content;
+    padding-bottom: 6rem;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    margin: 0 auto;
+    
   }
   
 
@@ -81,6 +98,11 @@ button {
     background-color: var(--text-color-2);
     border: 1px solid var(--ui-stroke-2);
     border-radius: 3px;
+
+    @media screen and (max-width: 768px) {
+     background-color: rgba(173, 179, 162, 0.8);
+     
+    }
     
 
     &:focus {
@@ -101,6 +123,10 @@ button {
     background-color: var(--text-color-2);
     border: 1px solid var(--ui-stroke-2);
     resize: none;
+
+    @media screen and (max-width: 768px) {
+      background-color: rgba(173, 179, 162, 0.8);
+     }
 
     &:focus {
       outline: 2px solid rgb(164, 203, 145);
@@ -130,6 +156,10 @@ button {
     background-color: var(--text-color-2);
     border: 1px solid var(--ui-stroke-2);
 
+    @media screen and (max-width: 768px) {
+      background-color: rgba(173, 179, 162, 0.8);
+     }
+
     .attending-container {
       display: flex;
       gap: 0.5rem;
@@ -140,6 +170,8 @@ button {
       margin: 0;
       padding: 0;
       border: none;
+
+      
 
       label {
         margin-top: 2px;
@@ -160,4 +192,8 @@ button {
   margin-top: 1rem;
   height: 2rem;
   width: 225px;
+
+  @media screen and (max-width: 768px) {
+    height: 5rem;
+   }
 }

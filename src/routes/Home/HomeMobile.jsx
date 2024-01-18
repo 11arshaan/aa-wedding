@@ -2,10 +2,17 @@ import Graphic from "../../components/Graphic/Graphic";
 import "./Home.scss";
 import RSVPForm from "../../components/RSVPForm/RSVPForm";
 import DownArrow from "../../components/DownArrow/DownArrow";
+import WindLeavesWebm from "../../assets/leaves_slow_2_alpha.webm";
+import WindLeavesMov from "../../assets/leaves_slow_2_alpha.mov";
+import LeftPlantMov from "../../assets/left_plant.mov";
+import LeftPlantWebm from "../../assets/left_plant.webm";
+import "../../components/Decorations/Decorations.scss";
+
+
 export default function HomeMobile() {
   return (
     <>
-      <div className="container-mobile">
+      <div className="container-mobile home-mobile-height">
         <div className="home-container-mobile">
           <div className="invite-header">
             <p className="invite-header-text">
@@ -79,6 +86,12 @@ export default function HomeMobile() {
             </p>
           </div>
         </div>
+        <div className="plants-container-mobile-2">
+      <video autoPlay loop muted playsInline className="left-plant-mobile-2">
+        <source src={LeftPlantWebm} />
+        <source src={LeftPlantMov} />
+      </video>
+      </div>
      
     </>
   );

@@ -20,12 +20,12 @@ export default function DecorationsMobile() {
       </video>
       </div>
 
-      <div className="plants-container-mobile-2">
+      {/* <div className="plants-container-mobile-2">
       <video autoPlay loop muted playsInline className="left-plant-mobile-2">
         <source src={LeftPlantWebm} />
         <source src={LeftPlantMov} />
       </video>
-      </div>
+      </div> */}
     </>
   );
 }

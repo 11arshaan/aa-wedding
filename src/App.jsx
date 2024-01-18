@@ -6,6 +6,7 @@ import { WindowContext } from "./utility/WindowContext";
 
 import Decorations from "./components/Decorations/Decorations";
 import DecorationsMobile from "./components/Decorations/DecorationsMobile";
+import SaiyyanMP3 from "./assets/Saiyyan.mp3";
 
 
 import Navbar from "./components/Navbar/Navbar";
@@ -28,10 +29,12 @@ function App() {
 
       if (alreadyLoaded) {
         setLoaded(true);
+        document.querySelector("audio").play();
       } else {
         const handleLoad = () => {
           setLoaded(true);
           sessionStorage.setItem("alreadyLoaded", "true");
+          document.querySelector("audio").play();
         };
   
         window.onload = handleLoad;
@@ -50,7 +53,7 @@ function App() {
 
   return (
     <div className="app">
-     
+      <audio src={SaiyyanMP3}></audio>
       {resize && resize.width > 768 ?  <Loading loaded={loaded} /> : ""}
       {resize && resize.width > 768 ? <Navbar /> : <NavbarMobile />}
       {resize && resize.width > 768 ? <Decorations /> : <DecorationsMobile />}

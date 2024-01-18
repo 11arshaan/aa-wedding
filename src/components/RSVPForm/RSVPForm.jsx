@@ -2,6 +2,7 @@ import { Formik, useFormik } from "formik";
 import { addGuest } from "../../utility/firebase-util";
 import {useState, useEffect} from 'react';
 import './RSVPForm.scss';
+import RightGraphic from "../../components/Graphic/Graphic";
 
 export default function RSVPForm() {
 
@@ -40,6 +41,7 @@ export default function RSVPForm() {
   }
 
   return (<>
+  <div className="container-left">
   {modal && <div onClick={handleModal}  class="rsvp-modal">
     <div class="rsvp-modal-content">
     <h1>Thank you!</h1>
@@ -139,6 +141,12 @@ export default function RSVPForm() {
 
       <button id="rsvp-confirm" type="submit" disabled={formik.isSubmitting}>Confirm</button>
     </form>
+   
+    </div>
+    <RightGraphic />
+     {/* <div className="container-right">
+     
+    </div> */}
     </>
   );
 }
