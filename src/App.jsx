@@ -50,8 +50,8 @@ function App() {
 
   return (
     <div className="app">
-      <Loading loaded={loaded} />
-
+     
+      {resize && resize.width > 768 ?  <Loading loaded={loaded} /> : ""}
       {resize && resize.width > 768 ? <Navbar /> : <NavbarMobile />}
       {resize && resize.width > 768 ? <Decorations /> : <DecorationsMobile />}
 

@@ -34,19 +34,52 @@ export default function HomeMobile() {
             </div>
           </div>
 
-          <div className="event-info">
+          {/* <div className="event-info">
             <p className="event-info-text">7:00 p.m. August 19th, 2023</p>
             <p className="event-info-text">5246 Beech Grove Side Rd</p>
             <p className="event-info-text">Caledon, ON L7K DM6</p>
-          </div>
+          </div> */}
         </div>
 
-        {/* <div className="mobile-graphic-container"> */}
+        <div className="mobile-graphic-container">
         <Graphic />
-        {/* </div> */}
+        </div>
       </div>
       <DownArrow />
-      <RSVPForm />
+      {/* <RSVPForm /> */}
+
+       {/* EVENT DETAILS BOX 1 */}
+       <div className="event-details-container mobile-z">
+          <div className="event-details-box">
+            <h1 className="boldinfo-title">Anand Karaj</h1>
+            <h3 className="boldinfo-date">August 31, 2024</h3>
+
+            <h4>Gurdwara Sikh Sangat Brampton</h4>
+            <h5>32 Regan Rd, Brampton, ON</h5>
+           
+            <br />
+            <p className="event-time">Milni: 9:45 AM</p>
+            <p className="event-time">Anand Karaj: 11:00 AM</p>
+            {/* <p className="event-time">
+              followed by Guru ka langar (vegetarian lunch)
+            </p> */}
+          </div>
+
+          {/* EVENT DETAILS BOX 2 */}
+          <div className="event-details-box ebox2">
+            <h1 className="boldinfo-title">Reception</h1>
+            <h3 className="boldinfo-date">September 1, 2020</h3>
+
+            <h4>Versailles Convention Centre</h4>
+            <h5>6721 Edwards Blvd, Mississauga, ON</h5>
+           
+            <br />
+            <p className="event-time">
+              Reception festivities will begin at 7:45 PM
+            </p>
+          </div>
+        </div>
+     
     </>
   );
 }
