@@ -24,26 +24,16 @@ function App() {
     };
     window.addEventListener("resize", handleResize);
 
-      // Check if the page was already loaded before
-      const alreadyLoaded = sessionStorage.getItem("alreadyLoaded") === "true";
-
-      if (alreadyLoaded) {
-        setLoaded(true);
-        document.querySelector("audio").play();
-      } else {
-        const handleLoad = () => {
-          setLoaded(true);
-          sessionStorage.setItem("alreadyLoaded", "true");
-          document.querySelector("audio").play();
-        };
-  
-        window.onload = handleLoad;
-      }
+    function handleLoad() {
+      setLoaded(true);
+    }
+    
+    window.onload = handleLoad;
 
     return () => {
       // Clean up event listeners
       window.removeEventListener("resize", handleResize);
-      window.onload = null;
+      window.removeEventListener("onload", handleLoad);
     };
   }, []);
 
@@ -53,8 +43,8 @@ function App() {
 
   return (
     <div className="app">
-      <audio src={SaiyyanMP3}></audio>
-      {resize && resize.width > 768 ?  <Loading loaded={loaded} /> : ""}
+      <audio controls="false" src={SaiyyanMP3}></audio>
+       <Loading loaded={loaded} />
       {resize && resize.width > 768 ? <Navbar /> : <NavbarMobile />}
       {resize && resize.width > 768 ? <Decorations /> : <DecorationsMobile />}
 

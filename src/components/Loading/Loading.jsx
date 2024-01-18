@@ -7,7 +7,11 @@ import { LoadedContext } from '../../utility/LoadedContext';
 
 const Loading = ({loaded}) => {
 
-  const fadeOut = loaded ? "fade-out" : "";
+
+  function fadeOut() {
+    document.querySelector('.loading-page').classList.add("fade-out");
+    document.querySelector('audio').play();
+  }
 
   const ref = useRef(); 
 
@@ -15,7 +19,9 @@ const Loading = ({loaded}) => {
     <div ref={ref} className={`loading-page ${fadeOut}`}>
       {/* Your loading page content */}
       <img className="loading-logo" src={AALogo} />
-      {loaded ? '' : <h1>Loading...</h1>}
+      {/* <h1 className={loaded ? "hideText" : ""}>Loading...</h1> */}
+      
+      <button className="enter-button" onClick={fadeOut} >Enter</button>
     </div>
   );
 };

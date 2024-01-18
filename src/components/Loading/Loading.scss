@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 99999999;
   opacity: 1;
   transition: opacity 0.7s;
 
@@ -47,4 +47,9 @@
     background-color: var(--text-color-1);
     color: var(--ui-stroke-1);
   }
+}
+
+.hideText {
+  visibility: hidden;
+  color: red;
 }

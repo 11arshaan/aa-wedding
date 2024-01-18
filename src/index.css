@@ -74,3 +74,26 @@ body {
   }
 
 }
+
+
+
+audio {
+  display:none !important;
+  
+}
+
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+.enter-button {
+  padding: 10px 30px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  background-color: var(--text-color-2);
+  border: 1px solid var(--text-color-1);
+  border-radius: 3px;
+  margin-top: 3rem;
+}
