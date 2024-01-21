@@ -19,7 +19,7 @@ export default function HomeMobile() {
               with profound joy and gratitude,
             </p>
             <p className="invite-header-text">
-              we invite you to the celebrate the union of
+              we invite you to celebrate the union of
             </p>
           </div>
 
