@@ -19,7 +19,7 @@ export default function HomeMobile() {
               with profound joy and gratitude,
             </p>
             <p className="invite-header-text">
-              we invite you to the celebrate the engagement of
+              we invite you to the celebrate the union of
             </p>
           </div>
 
@@ -75,7 +75,7 @@ export default function HomeMobile() {
           {/* EVENT DETAILS BOX 2 */}
           <div className="event-details-box ebox2">
             <h1 className="boldinfo-title">Reception</h1>
-            <h3 className="boldinfo-date">September 1, 2020</h3>
+            <h3 className="boldinfo-date">September 1, 2024</h3>
 
             <h4>Versailles Convention Centre</h4>
             <h5>6721 Edwards Blvd, Mississauga, ON</h5>
@@ -86,12 +86,12 @@ export default function HomeMobile() {
             </p>
           </div>
         </div>
-        <div className="plants-container-mobile-2">
+        {/* <div className="plants-container-mobile-2">
       <video autoPlay loop muted playsInline className="left-plant-mobile-2">
         <source src={LeftPlantWebm} />
         <source src={LeftPlantMov} />
       </video>
-      </div>
+      </div> */}
      
     </>
   );

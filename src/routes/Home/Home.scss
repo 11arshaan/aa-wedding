@@ -6,6 +6,7 @@
 
   @media screen and (max-width: 768px) {
     width: 100%;
+    
   }
 }
 
@@ -65,7 +66,7 @@
   align-items: center;
 
   @media screen and (max-width: 768px) {
-    margin-top: 1cap;
+    margin-top: 0;
     margin-bottom: 3rem;
     position: relative;
     top: -1rem;
@@ -174,22 +175,23 @@
   align-items: center;
   height: max-content;
   width: 100%;
+  
   // overflow: clip;
 }
-
 
 .home-mobile-height {
   height: 100vh;
 }
 .home-container-mobile {
+  margin-top: -1rem;
   width: 100%;
   height: 100%;
-  margin-top: 50%;
+  position: relative;
+  top: 26%;
 
   @media screen and (max-height: 600px) {
     margin-top: 67%;
     position: relative;
-    
   }
 }
 
@@ -200,6 +202,9 @@
   align-items: center;
   height: 100%;
   width: 100%;
+  
+  
+  
 }
 
 .arrow {
@@ -263,16 +268,22 @@
   flex-direction: column;
 
   h1 {
-    border: 1px solid var(--text-color-1);
-    width: 75%;
+    border: 1px solid var(--ui-stroke-1);
+    width: 45%;
     align-self: center;
     margin-bottom: 1rem;
-    font-size: 28px;
-    color: rgb(98, 115, 67);
+    font-size: 42px;
+    color: var(--text-color-1);
+
+    @media screen and (max-width: 768px) {
+      width: 90%;
+    }
   }
+
   h4,
   h5 {
     color: var(--text-color-1);
+    font-family: "Alike", serif;
   }
 }
 
@@ -281,24 +292,31 @@
 }
 
 .boldinfo-date {
-  color: rgb(98, 115, 67);
+  font-family: "Alike", serif;
+      font-size: 20px;
+
+
+      color: var(--text-color-1);
 }
 
 .boldinfo-title {
-  font-family: "Alike", serif;
+  font-family: "Alex Brush", cursive;
+  font-size: 60px;
+  white-space: nowrap;
+  color: var(--text-color-1);
 }
 
 .mobile-z {
   height: 38rem;
   padding: 0rem 1rem;
-  background: rgba(177, 187, 154, 0.524);
+  background: rgba(233, 235, 231, 0.524);
   border-radius: 12px;
-  -webkit-backdrop-filter: blur(7px);
-  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .event-time {
+  font-family: "Alike", serif;
   width: 60%;
   align-self: center;
-  
 }

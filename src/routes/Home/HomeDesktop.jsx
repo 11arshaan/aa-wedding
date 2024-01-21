@@ -12,7 +12,7 @@ export default function HomeDesktop() {
     if (loaded) {
       var options = {
         strings: [
-          ' <p className="invite-header-text">with profound joy and gratitude,</p> <p className="invite-header-text">we request your attendance to the</p> <p className="invite-header-text">the Anand Karaj and Reception of :</p>',
+          ' <p className="invite-header-text">with profound joy and gratitude,</p> <p className="invite-header-text">we invite you to celebrate</p> <p className="invite-header-text">the union of :</p>',
         ],
         typeSpeed: 20,
         showCursor: false,

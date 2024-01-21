@@ -8,6 +8,8 @@ import Decorations from "./components/Decorations/Decorations";
 import DecorationsMobile from "./components/Decorations/DecorationsMobile";
 import SaiyyanMP3 from "./assets/Saiyyan.mp3";
 
+import ScrollToTop from "./utility/ScrollTop";
+
 
 import Navbar from "./components/Navbar/Navbar";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
@@ -43,6 +45,7 @@ function App() {
 
   return (
     <div className="app">
+       <ScrollToTop />
       <audio controls="false" src={SaiyyanMP3}></audio>
        <Loading loaded={loaded} />
       {resize && resize.width > 768 ? <Navbar /> : <NavbarMobile />}

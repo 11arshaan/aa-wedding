@@ -19,6 +19,7 @@
   display: flex; /* Added to center the logo */
   justify-content: center; /* Added to center the logo */
   align-items: center;
+  
 
   .AALogo {
     width: 12rem;
@@ -26,10 +27,12 @@
     object-fit: contain;
     position: relative;
     left: 7%;
+  
 
     @media screen and (max-width: 1200px) {
       width: 8rem;
       left: 0%;
+
     }
 
     @media screen and (max-width: 900px) {
@@ -48,7 +51,7 @@
   justify-content: center; /* Added to center the graphic */
   align-items: flex-start; /* Added to place the graphic at the top of the container */
   z-index: 1;
-
+  
   @media screen and (max-width: 900px) {
     overflow: visible;
   }
@@ -82,7 +85,7 @@
 
 .AAGraphicContainerMobile {
   width: 55%;
-  top: 53%;
+  top: 50%;
   left: 25%;
   position: absolute;
 }
