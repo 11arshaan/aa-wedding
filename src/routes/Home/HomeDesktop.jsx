@@ -45,8 +45,18 @@ export default function HomeDesktop() {
         <div className="names-box">
           <div className="names-box-groom">
             <h2 className="marrier-name">Amaritpal Singh Sidhu</h2>
+            <p className="parent-names undl">
+              Son of:
+            </p>
             <p className="parent-names">
-              Son of Amrik Singh and Kulwinder Kaur Sidhu
+              Amrik Singh and Kulwinder Kaur Sidhu
+            </p>
+            <br />
+            <p className="parent-names undl">
+              Grandson of:
+            </p>
+            <p className="parent-names">
+              Rattan Singh, Joginder Kaur & Asa Singh, Gurmeet Kaur
             </p>
           </div>
 
@@ -54,8 +64,19 @@ export default function HomeDesktop() {
 
           <div className="names-box-bride">
             <h2 className="marrier-name">Arsheen Kour</h2>
+            <p className="parent-names undl">
+             Daughter of:
+            </p>
             <p className="parent-names">
-              Daughter of Paramjeet Singh and Gurdeep Kour
+             Paramjeet Singh and Gurdeep Kour
+            </p>
+            <br />
+            <p className="parent-names undl">
+              Granddaughter of:
+            </p>
+            <p className="parent-names">
+            Asa Singh, Satwant Kour & Santokh Singh, Jaswant
+              Kour
             </p>
           </div>
         </div>
@@ -77,7 +98,7 @@ export default function HomeDesktop() {
 
             <h4>Gurdwara Sikh Sangat Brampton</h4>
             <h5>32 Regan Rd, Brampton, ON</h5>
-           
+
             <br />
             <p className="event-time">Milni: 9:45 AM</p>
             <p className="event-time">Anand Karaj: 11:00 AM</p>
@@ -93,7 +114,7 @@ export default function HomeDesktop() {
 
             <h4>Versailles Convention Centre</h4>
             <h5>6721 Edwards Blvd, Mississauga, ON</h5>
-           
+
             <br />
             <p className="event-time">
               Reception festivities will begin at 7:45 PM

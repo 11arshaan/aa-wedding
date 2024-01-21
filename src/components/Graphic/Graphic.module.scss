@@ -38,6 +38,7 @@
     @media screen and (max-width: 900px) {
       left: 3%;
       width: 7rem;
+      
     }
   }
 }
@@ -52,7 +53,7 @@
   align-items: flex-start; /* Added to place the graphic at the top of the container */
   z-index: 1;
   
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 768px) {
     overflow: visible;
   }
   .AAGraphic {
@@ -64,12 +65,12 @@
     z-index: 1;
 
     @media screen and (max-width: 1200px) {
-      transform: scaleX(1) translateY(4%) translateX(5%);
+      transform: scale(.6) translateY(4%) translateX(5%);
     }
     @media screen and (max-width: 900px) {
-      transform: scaleX(1.2) scaleY(1.2) translateY(-3%) translateX(12%);
+     transform: scaleX(.7) scaleY(.7) translateY(33%) translateX(2%);
     }
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 768px) {
       transform: scaleX(1);
       z-index: 99998;
       
@@ -92,12 +93,12 @@
 
 .AAGraphicMobile {
   width: 100%;
-  transform: scaleX(-1);
+  transform: scale(-1, 1) translateX(90px);
 }
 
 .AALogoContainerMobile {
   position: absolute;
-  top: 15%;
+  top: 12%;
 
   @media screen and (max-height: 600px) {
     top: 12%;
@@ -108,4 +109,6 @@
   width: 7rem;
   height: auto;
   object-fit: contain;
+
+ margin-top: -2rem;
 }

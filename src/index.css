@@ -60,6 +60,12 @@ body {
    
   }
 
+  @media (min-height: 1280px) {
+    background-size: cover;
+    background-position:  24% center;
+    background-repeat: repeat;
+  }
+
 }
 
 

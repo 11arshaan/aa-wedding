@@ -24,22 +24,43 @@ export default function HomeMobile() {
           </div>
 
           <div className="names-box">
-            <div className="names-box-groom">
-              <h2 className="marrier-name">Amaritpal Singh Sidhu</h2>
-              <p className="parent-names">
-                Son of Amrik Singh and Kulwinder Kaur Sidhu
-              </p>
-            </div>
+          <div className="names-box-groom">
+            <h2 className="marrier-name">Amaritpal Singh Sidhu</h2>
+            <p className="parent-names undl">
+              Son of:
+            </p>
+            <p className="parent-names">
+              Amrik Singh and Kulwinder Kaur Sidhu
+            </p>
 
-            <h2 className="ampersand">&</h2>
-
-            <div className="names-box-bride">
-              <h2 className="marrier-name">Arsheen Kour</h2>
-              <p className="parent-names">
-                Daughter of Paramjeet Singh and Gurdeep Kour
-              </p>
-            </div>
+            <p className="parent-names undl">
+              Grandson of:
+            </p>
+            <p className="parent-names">
+              Rattan Singh, Joginder Kaur & Asa Singh, Gurmeet Kaur
+            </p>
           </div>
+
+          <h2 className="ampersand">&</h2>
+
+          <div className="names-box-bride">
+            <h2 className="marrier-name">Arsheen Kour</h2>
+            <p className="parent-names undl">
+             Daughter of:
+            </p>
+            <p className="parent-names">
+             Paramjeet Singh and Gurdeep Kour
+            </p>
+
+            <p className="parent-names undl">
+              Granddaughter of:
+            </p>
+            <p className="parent-names">
+            Asa Singh, Satwant Kour & Santokh Singh, Jaswant
+              Kour
+            </p>
+          </div>
+        </div>
 
           {/* <div className="event-info">
             <p className="event-info-text">7:00 p.m. August 19th, 2023</p>

@@ -11,6 +11,17 @@
   align-items: flex-start;
   padding-left: 10%;
 
+  @media screen and (max-width: 900px) {
+    
+    left: -4rem;
+    
+    border: 1px solid black;
+  }
+
+  @media screen and (min-height: 1280px) {
+    top: -10%;
+  }
+
   &__links {
     display: flex;
     flex-direction: column;

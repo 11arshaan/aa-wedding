@@ -14,12 +14,11 @@ export default function StoryDesktop() {
           Strangely enough, Arsheen was hesitant because she knew if she
           followed him, something would certainly happen between them.
           <br />
-          At the time she was solely focused on school and work.
         </p>
         <br />
         <p>
           She ended up following him and sure enough, Amaritpal messaged her and
-          made his interest in her known.
+          quickly made his interest in her known.
         </p>
         <br />
         <p>
@@ -40,7 +39,7 @@ export default function StoryDesktop() {
         </p>
         <br />
         <p>
-          With love and light, we invite you to join us as we celebrate this
+          With love and light, we invite you to join us as we celebrate this
           parenthesis in their infinity.
         </p>
       </div>
