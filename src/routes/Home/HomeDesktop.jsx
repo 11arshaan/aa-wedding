@@ -12,7 +12,7 @@ export default function HomeDesktop() {
     if (loaded) {
       var options = {
         strings: [
-          ' <p className="invite-header-text">with profound joy and gratitude,</p> <p className="invite-header-text">we invite you to celebrate</p> <p className="invite-header-text">the union of :</p>',
+          '<p className="invite-header-text">with profound joy and gratitude,</p> <p className="invite-header-text">we invite you to celebrate</p> <p className="invite-header-text">the union of :</p>',
         ],
         typeSpeed: 20,
         showCursor: false,
@@ -20,12 +20,8 @@ export default function HomeDesktop() {
         contenType: "html",
       };
       var typed = new Typed(typedInfo.current, options);
-      return () => {
-        typed.destroy();
-      };
     }
-
-    window.addEventListener("scroll", () => {
+    function scrollCheck() {
       var element = document.querySelector(".arrow");
       var fadeStart = 100; // px, adjust to your needs
 
@@ -34,27 +30,26 @@ export default function HomeDesktop() {
       } else {
         element.style.opacity = "1";
       }
-    });
+    }
+    window.addEventListener("scroll", scrollCheck);
+
+    return () => {
+      typed && typed.destroy();
+    };
   }, [loaded]);
 
   return (
     <div className="container">
       <div className="container-left fade-in">
-        <div className="invite-header " ref={typedInfo}></div>
+        <div className="invite-header" ref={typedInfo}></div>
 
         <div className="names-box">
           <div className="names-box-groom">
             <h2 className="marrier-name">Amaritpal Singh Sidhu</h2>
-            <p className="parent-names undl">
-              Son of:
-            </p>
-            <p className="parent-names">
-              Amrik Singh and Kulwinder Kaur Sidhu
-            </p>
+            <p className="parent-names undl">Son of:</p>
+            <p className="parent-names">Amrik Singh and Kulwinder Kaur Sidhu</p>
             <br />
-            <p className="parent-names undl">
-              Grandson of:
-            </p>
+            <p className="parent-names undl">Grandson of:</p>
             <p className="parent-names">
               Rattan Singh, Joginder Kaur & Asa Singh, Gurmeet Kaur
             </p>
@@ -64,19 +59,12 @@ export default function HomeDesktop() {
 
           <div className="names-box-bride">
             <h2 className="marrier-name">Arsheen Kour</h2>
-            <p className="parent-names undl">
-             Daughter of:
-            </p>
-            <p className="parent-names">
-             Paramjeet Singh and Gurdeep Kour
-            </p>
+            <p className="parent-names undl">Daughter of:</p>
+            <p className="parent-names">Paramjeet Singh and Gurdeep Kour</p>
             <br />
-            <p className="parent-names undl">
-              Granddaughter of:
-            </p>
+            <p className="parent-names undl">Granddaughter of:</p>
             <p className="parent-names">
-            Asa Singh, Satwant Kour & Santokh Singh, Jaswant
-              Kour
+              Asa Singh, Satwant Kour & Santokh Singh, Jaswant Kour
             </p>
           </div>
         </div>

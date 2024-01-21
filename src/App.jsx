@@ -46,7 +46,7 @@ function App() {
   return (
     <div className="app">
        <ScrollToTop />
-      <audio controls="false" src={SaiyyanMP3}></audio>
+      <audio controls={false} src={SaiyyanMP3}></audio>
        <Loading loaded={loaded} />
       {resize && resize.width > 768 ? <Navbar /> : <NavbarMobile />}
       {resize && resize.width > 768 ? <Decorations /> : <DecorationsMobile />}

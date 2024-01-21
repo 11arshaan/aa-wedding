@@ -15,11 +15,12 @@
     
     left: -4rem;
     
-    border: 1px solid black;
-  }
+    
 
   @media screen and (min-height: 1280px) {
     top: -10%;
+    border: 1px solid black;
+  }
   }
 
   &__links {
