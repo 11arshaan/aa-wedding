@@ -121,7 +121,7 @@ export default function RSVPForm() {
         </div>
       </fieldset>
 
-      <label htmlFor="rsvp-guests">Total Guests</label>
+      <label htmlFor="rsvp-guests">Number of Guests</label>
       <input
         id="rsvp-guests"
         name="guests"
