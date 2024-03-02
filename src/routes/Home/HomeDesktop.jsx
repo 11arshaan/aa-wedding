@@ -98,7 +98,7 @@ export default function HomeDesktop() {
           {/* EVENT DETAILS BOX 2 */}
           <div className="event-details-box ebox2">
             <h1 className="boldinfo-title">Reception</h1>
-            <h3 className="boldinfo-date">September 1, 2020</h3>
+            <h3 className="boldinfo-date">September 1, 2024</h3>
 
             <h4>Versailles Convention Centre</h4>
             <h5>6721 Edwards Blvd, Mississauga, ON</h5>
