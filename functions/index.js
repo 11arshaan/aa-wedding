@@ -9,7 +9,7 @@ exports.sendEmailOnRSVP = functions.firestore
     .onCreate(async (snap, context) => {
       const guestData = snap.data();
 
-
+      
       // Prepare nodemailer transport object
       const transporter = nodemailer.createTransport({
         service: "gmail",

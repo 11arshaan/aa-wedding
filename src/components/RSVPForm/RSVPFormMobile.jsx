@@ -42,8 +42,8 @@ export default function RSVPForm() {
 
   return (<>
   
-  {modal && <div onClick={handleModal}  class="rsvp-modal">
-    <div class="rsvp-modal-content">
+  {modal && <div onClick={handleModal}  className="rsvp-modal">
+    <div className="rsvp-modal-content">
     <h1>Thank you!</h1>
     <p>We have received your RSVP and will notify you with important updates.</p>
     <button onClick={handleModal} type="button" id="close-modal-button">Close</button>
