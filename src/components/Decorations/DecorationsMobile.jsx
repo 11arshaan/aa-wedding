@@ -9,10 +9,7 @@ import "./Decorations.scss";
 export default function DecorationsMobile() {
   return (
     <>
-      <video autoPlay loop muted playsInline className="wind-leaves-mobile">
-        <source src={WindLeavesWebm} />
-        <source src={WindLeavesMov} />
-      </video>
+   
       
       {/* <div className="plants-container-mobile">
       <video autoPlay loop muted playsInline className="left-plant-mobile">
