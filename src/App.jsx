@@ -15,6 +15,10 @@ import Navbar from "./components/Navbar/Navbar";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
 import Loading from "./components/Loading/Loading";
 
+
+//WOOHOO
+
+
 function App() {
   const { resize, setResize } = useContext(WindowContext);
   const { loaded, setLoaded } = useContext(LoadedContext);

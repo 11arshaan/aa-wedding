@@ -22,7 +22,7 @@ const Loading = ({loaded}) => {
       <img className="loading-logo" src={AALogo} />
       {/* <h1 className={loaded ? "hideText" : ""}>Loading...</h1> */}
       
-      <button className="enter-button" onClick={fadeOut} >Enter</button>
+      <button className="enter-button" onClick={fadeOut} >Enter </button>
     </div>
   );
 };
