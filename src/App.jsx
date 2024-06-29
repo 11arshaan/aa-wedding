@@ -43,6 +43,15 @@ function App() {
     setRefresh(!refresh);
   }, [resize]);
 
+  useEffect(() => {
+    if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
+      const body = document.querySelector('body');
+      body.style.display = 'none';
+      body.offsetHeight; // no need to store this anywhere, the reference is enough
+      body.style.display = '';
+    }
+  }, []);
+
   return (
     <div className="app">
        <ScrollToTop />

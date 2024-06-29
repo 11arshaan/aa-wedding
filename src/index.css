@@ -41,31 +41,44 @@ html, body {
   
  
 }
+video.wind-leaves {
+  background-color: transparent;
+  pointer-events: none;
+}
 
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
 
 body {
- background-color: #f4f3f0;
+  background-color: #f4f3f0;
   background-image: url('./assets/floralbackground2.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  
-  @media screen and (max-width: 768px) {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  body {
     background-image: url('./assets/floralbackground2_mobileb.jpg');
     background-size: cover;
-    background-attachment:scroll;
-    background-repeat: repeat;
-
-   
+    background-attachment: scroll;
+    background-repeat: no-repeat;
   }
+}
 
-  @media (min-height: 1280px) {
+@media (min-height: 1280px) {
+  body {
     background-size: cover;
-    background-position:  24% center;
-    background-repeat: repeat;
+    background-position: 24% center;
+    background-repeat: no-repeat;
   }
-
 }
 
 
