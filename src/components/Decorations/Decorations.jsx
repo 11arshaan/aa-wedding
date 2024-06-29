@@ -12,10 +12,7 @@ export default function Decorations() {
 
   return (
     <>
-      <video autoPlay loop muted playsInline preload="metadata" className="wind-leaves">
-        <source src={WindLeavesMov} type="video/quicktime"  />
-        <source src={WindLeavesWebm} />
-      </video>
+
 
       {/* <video autoPlay loop muted playsInline className="left-plant">
         <source src={LeftPlantWebm} />

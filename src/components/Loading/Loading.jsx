@@ -11,10 +11,7 @@ const Loading = ({loaded}) => {
   function fadeOut() {
     document.querySelector('.loading-page').classList.add("fade-out");
     document.querySelector('audio').play();
-    const video = document.querySelector('.wind-leaves');
-    if (video) {
-      video.play();
-    }
+
   }
 
   const ref = useRef(); 
